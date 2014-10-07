@@ -1,1 +1,3 @@
-console.log('The Iron Yard Rocks');
+items.forEach(function(item){
+  console.log(item.title);
+})
