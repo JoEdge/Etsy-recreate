@@ -13,9 +13,9 @@ allItems.forEach (function(item){
 
   wShopName = "<li>" + item.Shop.shop_name + "</li>";
 
-  wImage = "<ul class = "image"><img src='" + item.Images[0].url_170x135 + "' /></ul>";
+  wImage = "<div><img src='" + item.Images[0].url_170x135 + "' /></ul>";
 
 
-$("#eitems").append(wImage + wTitle + wPrice + wShopName);
+$(".box").append(wImage + wTitle + wPrice + wShopName);
 
 });
