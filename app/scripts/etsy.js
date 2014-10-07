@@ -1,4 +1,4 @@
-var items = {
+var whisky = {
 "count": 18160,
 "results": [
 {
