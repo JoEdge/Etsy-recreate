@@ -5,18 +5,17 @@ var wShopName;
 var wImage;
 
 
-
 allItems.forEach (function(item){
 
-   wTitle = "<li>" + item.title + "</li>";
+  wTitle = "<li>" + item.title + "</li>";
 
-  wPrice = "<li>" + item.price + "</li>";
+  wPrice = "<li>" + item.currency_code + " " + item.price + "</li>";
 
   wShopName = "<li>" + item.Shop.shop_name + "</li>";
 
-  wImage = "<li><img src='" + item.Images[0].url_75x75 + "' /></li>";
+  wImage = "<ul class = "image"><img src='" + item.Images[0].url_170x135 + "' /></ul>";
 
 
-$("#eitems").append(wTitle + wPrice + wShopName + wImage);
+$("#eitems").append(wImage + wTitle + wPrice + wShopName);
 
 });
