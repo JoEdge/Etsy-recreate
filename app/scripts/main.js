@@ -1,3 +1,5 @@
+var everyThing = $('.box');
+
 var allItems = whisky.results;
 var wTitle;
 var wPrice;
@@ -7,15 +9,18 @@ var wImage;
 
 allItems.forEach (function(item){
 
-  wTitle = "<li>" + item.title + "</li>";
+  wTitle = "<p class = 'title'>" + item.title + "</p>";
 
-  wPrice = "<li>" + item.currency_code + " " + item.price + "</li>";
+  wPrice = "<p>" + item.currency_code + " " + item.price + "</p>";
 
-  wShopName = "<li>" + item.Shop.shop_name + "</li>";
+  wShopName = "<p>" + item.Shop.shop_name + "</p>";
 
-  wImage = "<div><img src='" + item.Images[0].url_170x135 + "' /></ul>";
+  wImage = "<img src='" + item.Images[0].url_170x135 + "'/>";
 
 
-$(".box").append(wImage + wTitle + wPrice + wShopName);
+var whiskyAll = "<li>" + wImage + wTitle + wPrice + wShopName + "</li>";
+
+
+everyThing.append(whiskyAll);
 
 });
