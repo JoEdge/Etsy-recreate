@@ -1,3 +1,1 @@
-items.forEach(function(item){
-  console.log(item.title);
-})
+console.log(items);
