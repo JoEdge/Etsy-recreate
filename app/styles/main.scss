@@ -5,7 +5,8 @@
 // Custom Styles
 
 main {
-  width: 1300px;
+  max-width: 90em;
+  width: 1400px;
   height: 1000px;
   background-color: hsla(60, 17%, 95%, 1);
 }
@@ -24,7 +25,7 @@ main {
   width: 225px;
   height: 1120px;
   margin-right: 20px;
-  margin-left: 178px;
+  margin-left: 90px;
   background-color: white;
 }
 
@@ -35,24 +36,22 @@ main {
 //Right Side of page
 
 .rightSide{
-  float: left;
-  width: 760px;
+  @include outer-container;
+  float: right;
+  width: 1000px;
   height: 1120px;
   background-color: hsla(60, 17%, 95%, 1);
 }
 
-.box {
-  @include outer-container;
-  display: inline-block;
+ul .box {
+
   width: 260px;
-  height: 205px;
   margin: 0px;
 }
 
 .box li {
-  @include span-columns(4);
-  @include omega(4n);
-  display: block;
+  @include span-columns(3);
+  @include omega(3n);
   width: 225px;
   height: 220px;
   font-size:13px;
