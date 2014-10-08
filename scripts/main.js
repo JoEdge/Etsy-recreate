@@ -4072,9 +4072,9 @@ allItems.forEach (function(item){
 
   wTitle = "<p class = 'title'>" + item.title + "</p>";
 
-  wPrice = "<p>" + item.currency_code + " " + item.price + "</p>";
+  wPrice = "<p class = 'price'>" + item.currency_code + " " + item.price + "</p>";
 
-  wShopName = "<p>" + item.Shop.shop_name + "</p>";
+  wShopName = "<p class = 'shop'>" + item.Shop.shop_name + "</p>";
 
   wImage = "<img src='" + item.Images[0].url_170x135 + "'/>";
 
