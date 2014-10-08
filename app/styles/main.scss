@@ -7,55 +7,94 @@
 main {
   width: 1300px;
   height: 1000px;
-  background-color: yellow;
+  background-color: hsla(60, 17%, 95%, 1);
 }
 
 .header{
-  border:solid;
-  border-width:1px;
-  height:55px;
-  width:1300px;
+  width: 1300px;
+  height: 55px;
+  border: solid;
+  border-width: 1px;
 }
+
+//Sidebar
 
 .sidebar {
-  margin-left:178px;
-  border-width:1px;
-  border:solid;
-  width:225px;
-  height:1120px;
-  float:left;
-  margin-right:20px;
-  background-color:white;
+  float: left;
+  width: 225px;
+  height: 1120px;
+  margin-right: 20px;
+  margin-left: 178px;
+  background-color: white;
 }
 
+.categories ul li{
+  list-style: none;
+}
+
+//Right Side of page
 
 .rightSide{
-  display:inline-block;
-  border:solid;
-  border-width:1px;
-  float:left;
-  width:760px;
-  height:1120px;
-  background-color:white;
+  float: left;
+  width: 760px;
+  height: 1120px;
+  background-color: hsla(60, 17%, 95%, 1);
 }
 
 .box {
-  width:222px;
-  height:205px;
+  @include outer-container;
+  display: inline-block;
+  width: 260px;
+  height: 205px;
   margin: 0px;
 }
 
-ul {
-  @include outer-container;
+.box li {
+  @include span-columns(4);
+  @include omega(4n);
+  display: block;
+  width: 225px;
+  height: 220px;
+  font-size:13px;
+  background-color: white;
+  list-style:none;
+}
 
-  li {
-    @include span-columns(4);
-    @include omega(4n);
-    list-style:none;
-    width: 225px;
-    height: 220px;
-  }
+img {
+  float: left;
+  width: 215px;
+  height: 170px;
+  padding-left: 10px;
+}
 
+
+.title {
+  width: 205px;
+  margin-top: 0px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  float: right;
+  margin-top: 0px;
+  margin-right: 3px;
+  color: green;
+
+}
+
+.shop {
+  width: 100px;
+  float: left;
+  margin-top: 0px;
+  margin-left: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: gray;
 }
 
 //*{border:solid;}
