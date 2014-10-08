@@ -3,24 +3,59 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+
+main {
+  width: 1300px;
+  height: 1000px;
+  background-color: yellow;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+.header{
+  border:solid;
+  border-width:1px;
+  height:55px;
+  width:1300px;
 }
+
+.sidebar {
+  margin-left:178px;
+  border-width:1px;
+  border:solid;
+  width:225px;
+  height:1120px;
+  float:left;
+  margin-right:20px;
+  background-color:white;
+}
+
+
+.rightSide{
+  display:inline-block;
+  border:solid;
+  border-width:1px;
+  float:left;
+  width:760px;
+  height:1120px;
+  background-color:white;
+}
+
+.box {
+  width:222px;
+  height:205px;
+  margin: 0px;
+}
+
+ul {
+  @include outer-container;
+
+  li {
+    @include span-columns(4);
+    @include omega(4n);
+    list-style:none;
+    width: 225px;
+    height: 220px;
+  }
+
+}
+
+//*{border:solid;}
